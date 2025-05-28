@@ -354,22 +354,30 @@
     
     <!-- Additional authentication handling for this page -->
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = sessionStorage.getItem('userLoggedIn') === 'true';
-    const authBtn = document.getElementById('authBtn');
+  document.addEventListener('DOMContentLoaded', function () {
+    const loginBtn = document.querySelector('.header .btn');
 
-    if (isLoggedIn) {
-      authBtn.textContent = 'Logout';
-      authBtn.href = '#';
-      authBtn.addEventListener('click', () => {
+    // Check sessionStorage or localStorage for login state
+    const isLoggedIn = sessionStorage.getItem('LogInUser') === 'true' || localStorage.getItem('LogInUser') === 'true';
+
+    if (isLoggedIn && loginBtn) {
+      loginBtn.textContent = 'Logout';
+      loginBtn.href = '#'; // prevent navigation on logout
+
+      loginBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Clear login state
+        sessionStorage.removeItem('LogInUser');
+        sessionStorage.removeItem('loginTime');
         sessionStorage.removeItem('userLoggedIn');
-        window.location.reload();
-      });
+        localStorage.removeItem('LogInUser');
+        localStorage.removeItem('loginTime');
 
-      const userWelcome = document.getElementById('userWelcome');
-      if (userWelcome) {
-        userWelcome.textContent = 'Welcome back!';
-      }
+        // Optionally show confirmation or redirect
+        alert('You have been logged out.');
+        window.location.href = '/coffee-shop-website-design-main/index.html';
+      });
     }
   });
 </script>
