@@ -430,7 +430,7 @@
     <link rel="stylesheet" href="/coffee-shop-website-design-main/css/Style.css">
 
     <!-- Web Icon -->
-    <link rel="icon" type="image/x-icon" href="/coffee-shop-website-design-main/image/coffee_vape_icon.ico">
+    <link rel="icon" type="image/x-icon" href="/src/image/coffee_vape_icon.ico">
 </head>
 
 <body>
@@ -446,7 +446,7 @@
                 // Store the current page as intended destination
                 sessionStorage.setItem('intendedPage', window.location.href);
                 alert('Please log in to access the checkout page.');
-                window.location.href = '/coffee-shop-website-design-main/html/LogSign.html';
+                window.location.href = '/src/html/LogSign.html';
                 return false;
             }
             return true;
@@ -461,15 +461,15 @@
     <!-- HEADER -->
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="/coffee-shop-website-design-main/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i></a>
+          <a href="/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i></a>
 
         <nav class="navbar">
-            <a href="/coffee-shop-website-design-main/index.html">home</a>
-            <a href="/coffee-shop-website-design-main/html/About.html">about</a>
-            <a href="/coffee-shop-website-design-main/html/Menu.html">menu</a>
-            <a href="/coffee-shop-website-design-main/html/Checkout.html">checkout</a>
+            <a href="/index.html">home</a>
+            <a href="/src/html/About.html">about</a>
+            <a href="/src/html/Menu.html">menu</a>
+            <a href="/src/html/Checkout.html">checkout</a>
         </nav>
-        <a href="/coffee-shop-website-design-main/html/LogSign.html" class="btn" id="authBtn">Login/Signup</a>
+        <a href="/src/html/LogSign.html" class="btn" id="authBtn">Login/Signup</a>
     </header>
 
     <div class="main-container">
@@ -502,7 +502,7 @@
         
         <div class="product-row" data-category="coffee">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/menu-1.png" alt="Caramel Coffee" class="product-image">
+                <img src="/src/image/menu-1.png" alt="Caramel Coffee" class="product-image">
                 <div class="product-details">
                     <h3>Caramel</h3>
                     <p class="product-description">A rich, aromatic blend where the boldness of coffee meets the creamy sweetness of caramel for a perfectly indulgent sip.</p>
@@ -523,7 +523,7 @@
         <div class="product-row" data-category="coffee">
             <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/menu-2.png" alt="Vanilla Coffee" class="product-image">
+                <img src="/src/image/menu-2.png" alt="Vanilla Coffee" class="product-image">
                 <div class="product-details">
                     <h3>Vanilla</h3>
                     <p class="product-description">A smooth and aromatic blend of bold coffee with the creamy, subtly sweet essence of vanilla, creating a comforting and elegant flavor.</p>
@@ -544,7 +544,7 @@
         <div class="product-row" data-category="coffee">
             <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/menu-3.png" alt="Mocha Coffee" class="product-image">
+                <img src="/src/image/menu-3.png" alt="Mocha Coffee" class="product-image">
                 <div class="product-details">
                     <h3>Mocha</h3>
                     <p class="product-description">A rich and indulgent blend of espresso, creamy steamed milk, and chocolate, creating a smooth, slightly sweet, and comforting flavor.</p>
@@ -565,7 +565,7 @@
         <div class="product-row" data-category="coffee">
             <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/menu-4.png" alt="Hazelnut Coffee" class="product-image">
+                <img src="/src/image/menu-4.png" alt="Hazelnut Coffee" class="product-image">
                 <div class="product-details">
                     <h3>Hazelnut</h3>
                     <p class="product-description">A warm, nutty blend of rich coffee and the toasty sweetness of hazelnut, creating a smooth, aromatic, and slightly creamy experience.</p>
@@ -586,7 +586,7 @@
         <div class="product-row" data-category="coffee">
             <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/menu-5.png" alt="Pumpkin Spice Coffee" class="product-image">
+                <img src="/src/image/menu-5.png" alt="Pumpkin Spice Coffee" class="product-image">
                 <div class="product-details">
                     <h3>Pumpkin Spice</h3>
                     <p class="product-description">A cozy blend of bold coffee with warm spices like cinnamon, nutmeg, and cloves, creating a rich, aromatic, and autumn-inspired flavor.</p>
@@ -607,7 +607,7 @@
         <div class="product-row" data-category="coffee">
             <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/menu-6.png" alt="Peppermint Coffee" class="product-image">
+                <img src="/src/image/menu-6.png" alt="Peppermint Coffee" class="product-image">
                 <div class="product-details">
                     <h3>Peppermint</h3>
                     <p class="product-description">A refreshing blend of rich coffee with cool, minty peppermint, creating a bold, invigorating, and slightly sweet flavor.</p>
@@ -639,7 +639,7 @@
         <div class="product-row" data-category="vape">
             <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/vape1.png" alt="Puff Deluxe" class="product-image">
+                <img src="/src/image/vape1.png" alt="Puff Deluxe" class="product-image">
                 <div class="product-details">
                     <h3>Puff Deluxe</h3>
                     <p class="product-description">A sophisticated box-style device featuring a powerful 6000mAh battery and a seamless refillable system, delivering unparalleled performance and luxury.</p>
@@ -660,7 +660,7 @@
         <div class="product-row" data-category="vape">
             <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/vape2.png" alt="Puff Premium" class="product-image">
+                <img src="/src/image/vape2.png" alt="Puff Premium" class="product-image">
                 <div class="product-details">
                     <h3>Puff Premium</h3>
                     <p class="product-description">A sleek 3000mAh pen-style device that merges advanced rechargeable technology with a seamless refillable design, delivering an exquisite experience.</p>
@@ -681,7 +681,7 @@
         <div class="product-row" data-category="vape">
             <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/vape3.png" alt="Strawberry Surge" class="product-image">
+                <img src="/src/image/vape3.png" alt="Strawberry Surge" class="product-image">
                 <div class="product-details">
                     <h3>Strawberry Surge</h3>
                     <p class="product-description">Indulge in the rich, juicy essence of strawberries with the ultra-premium Strawberry Surge disposable vape—crafted for an extraordinary 100,000-puff experience.</p>
@@ -702,7 +702,7 @@
         <div class="product-row" data-category="vape">
             <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
-                <img src="/coffee-shop-website-design-main/image/vape4.webp" alt="CloudBerry Burst" class="product-image">
+                <img src="/src/image/vape4.webp" alt="CloudBerry Burst" class="product-image">
                 <div class="product-details">
                     <h3>CloudBerry Burst</h3>
                     <p class="product-description">Unleash the bold essence of ripe grapes with CloudBerry Burst—a premium disposable vape engineered for a smooth, intense, and long-lasting 100,000-puff experience.</p>
@@ -758,7 +758,7 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- Custom JS File Link  -->
-    <script src="js/script.js"></script>
+    <script src="/src/js/script.js"></script>
 
     <!-- Include the authentication script -->
     <script src="/coffee-shop-website-design-main/js/auth.js"></script>
@@ -794,7 +794,7 @@
     }
   });
 </script>
-    <script src="auth_system.js"></script>
+    <script src="/src/js/auth_system.js"></script>
 
 </body>
 >>>>>>> da2516289b9ccf3b54aab132fa219ae5489268ef:src/html/Checkout.html
