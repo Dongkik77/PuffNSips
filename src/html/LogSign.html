@@ -32,28 +32,19 @@
             <input type="checkbox" name="showpP" id="show-pass" style="margin-top: 10px;">
             <label for="show-pass">Show password.</label>
           </div>
-
-          <div class="Forgot_password">
-            <a href="ResetPass.html">Forgot Password?</a>
-
           <button type="submit" id="login">Login</button>
 
           <div class="new-user">
-            <a href="/src/html/SignUp.html" class="btn">New User? Sign Up</a>
+            <a href="/src/html/SignUp.html" class="btn">New User? Sign-up here.</a>
           </div>
         </form>
+        <div class="Forgot_password">
+            <a href="ResetPass.html">Forgot Password?</a>
+          </div>
       </div>
     </div>
   </div>
 
-  <script>
-  const passwordInput = document.getElementById('password');
-  const showPassCheckbox = document.getElementById('show-pass');
-
-  showPassCheckbox.addEventListener('change', function () {
-    passwordInput.type = this.checked ? 'text' : 'password';
-  });
-</script>
   <script type="module" src="/src/js/authsystem.js"></script>
   <script type="module" src="/src/js/LogIn.js"></script>
 </body>

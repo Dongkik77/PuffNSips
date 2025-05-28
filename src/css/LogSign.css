@@ -81,6 +81,22 @@ form {
   margin-bottom: 20px;
 }
 
+.Forgot_password{
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 0%;
+}
+
+.Forgot_password a{
+  color: rgb(92, 92, 69);
+  text-decoration: none;
+}
+
+.new-user a{
+  color: rgb(92, 92, 69);
+  text-decoration: none;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"] {
