@@ -53,10 +53,9 @@
         }
 
         .navbar a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
+            margin: 0 1rem;
+            font-size: 1.7rem;
+            color: var(--main-color);
         }
 
         .btn {
@@ -69,7 +68,7 @@
         }
 
         .btn:hover {
-            background: #6f3710;
+            background: white;
         }
 
         #menu-btn {
@@ -287,6 +286,7 @@
         }
 
         /* Footer Styles */
+
 
         .box-container {
             display: grid;
