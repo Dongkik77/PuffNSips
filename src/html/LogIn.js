@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sessionStorage.removeItem('intendedPage');
             window.location.href = intendedPage;
           } else {
-            window.location.href = '/coffee-shop-website-design-main/index.html';
+            window.location.href = '/index.html';
           }
         })
         .catch((error) => {
