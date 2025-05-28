@@ -13,7 +13,6 @@
 
     <!-- Custom CSS File Link -->
     <link rel="stylesheet" href="/coffee-shop-website-design-main/css/CoStyle.css">
-    <link rel="stylesheet" href="/coffee-shop-website-design-main/css/Style.css">
 
     <!-- Web Icon -->
     <link rel="icon" type="image/x-icon" href="/coffee-shop-website-design-main/image/coffee_vape_icon.ico">
@@ -21,7 +20,7 @@
 
 <body>
     
-     Authentication Check Script
+    <!-- Authentication Check Script -->
     <script>
         // Immediate authentication check before page loads
         function checkAuthBeforeLoad() {
@@ -47,7 +46,7 @@
     <!-- HEADER -->
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="/coffee-shop-website-design-main/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i></a>
+        <a href="/coffee-shop-website-design-main/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i></a>
 
         <nav class="navbar">
             <a href="/coffee-shop-website-design-main/index.html">home</a>
@@ -68,14 +67,13 @@
         </div>
         
         <div class="header-row">
-            <div></div>
             <div>Product</div>
             <div>Unit Price</div>
             <div>Quantity</div>
             <div>Total Price</div>
         </div>
         
-         <!-- COFFEE SECTION -->
+        <!-- COFFEE SECTION -->
         <div class="section-header">
             <div class="section-title">
                 <i class="fas fa-mug-hot section-icon"></i>
@@ -107,7 +105,6 @@
         </div>
         
         <div class="product-row" data-category="coffee">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/menu-2.png" alt="Vanilla Coffee" class="product-image">
                 <div class="product-details">
@@ -128,7 +125,6 @@
         </div>
         
         <div class="product-row" data-category="coffee">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/menu-3.png" alt="Mocha Coffee" class="product-image">
                 <div class="product-details">
@@ -149,7 +145,6 @@
         </div>
         
         <div class="product-row" data-category="coffee">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/menu-4.png" alt="Hazelnut Coffee" class="product-image">
                 <div class="product-details">
@@ -170,7 +165,6 @@
         </div>
         
         <div class="product-row" data-category="coffee">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/menu-5.png" alt="Pumpkin Spice Coffee" class="product-image">
                 <div class="product-details">
@@ -191,7 +185,6 @@
         </div>
         
         <div class="product-row" data-category="coffee">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="coffee">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/menu-6.png" alt="Peppermint Coffee" class="product-image">
                 <div class="product-details">
@@ -223,7 +216,6 @@
         </div>
         
         <div class="product-row" data-category="vape">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/vape1.png" alt="Puff Deluxe" class="product-image">
                 <div class="product-details">
@@ -244,7 +236,6 @@
         </div>
         
         <div class="product-row" data-category="vape">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/vape2.png" alt="Puff Premium" class="product-image">
                 <div class="product-details">
@@ -265,7 +256,6 @@
         </div>
         
         <div class="product-row" data-category="vape">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/vape3.png" alt="Strawberry Surge" class="product-image">
                 <div class="product-details">
@@ -286,7 +276,6 @@
         </div>
         
         <div class="product-row" data-category="vape">
-            <input type="checkbox" class="checkbox product-checkbox" data-section="vape">
             <div class="product-info">
                 <img src="/coffee-shop-website-design-main/image/vape4.webp" alt="CloudBerry Burst" class="product-image">
                 <div class="product-details">
@@ -317,7 +306,7 @@
     <section class="footer">
         <div class="box-container">
             <div class="box">
-              <h3>our branches</h3>
+                <h3>our branches</h3>
                 <a href="#"><i class="fas fa-arrow-right"></i> Bacolor Pampanga </a>
                 <a href="#"><i class="fas fa-arrow-right"></i> Quezon City Manila</a>
             </div>
@@ -353,26 +342,72 @@
     
     <!-- Additional authentication handling for this page -->
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = sessionStorage.getItem('userLoggedIn') === 'true';
-    const authBtn = document.getElementById('authBtn');
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = sessionStorage.getItem('userLoggedIn') === 'true';
+            const authBtn = document.getElementById('authBtn');
 
-    if (isLoggedIn) {
-      authBtn.textContent = 'Logout';
-      authBtn.href = '#';
-      authBtn.addEventListener('click', () => {
-        sessionStorage.removeItem('userLoggedIn');
-        window.location.reload();
-      });
+            if (isLoggedIn) {
+                authBtn.textContent = 'Logout';
+                authBtn.href = '#';
+                authBtn.addEventListener('click', () => {
+                    sessionStorage.removeItem('userLoggedIn');
+                    window.location.reload();
+                });
 
-      const userWelcome = document.getElementById('userWelcome');
-      if (userWelcome) {
-        userWelcome.textContent = 'Welcome back!';
-      }
-    }
-  });
-</script>
-    <script src="auth_system.js"></script>
+                const userWelcome = document.getElementById('userWelcome');
+                if (userWelcome) {
+                    userWelcome.textContent = 'Welcome back!';
+                }
+            }
+        });
+
+        // Quantity control functions
+        function increaseQty(btn) {
+            const input = btn.previousElementSibling;
+            input.value = parseInt(input.value) + 1;
+            updateTotal(input);
+        }
+
+        function decreaseQty(btn) {
+            const input = btn.nextElementSibling;
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+                updateTotal(input);
+            }
+        }
+
+        function updateTotal(input) {
+            const row = input.closest('.product-row');
+            const price = parseFloat(row.querySelector('.price').textContent.replace('$', ''));
+            const quantity = parseInt(input.value) || 0;
+            const total = price * quantity;
+            
+            row.querySelector('.total-amount').textContent = '$' + total;
+            updateCartTotal();
+        }
+
+        function updateCartTotal() {
+            let cartTotal = 0;
+            document.querySelectorAll('.total-amount').forEach(total => {
+                cartTotal += parseFloat(total.textContent.replace('$', '')) || 0;
+            });
+            document.getElementById('cartTotal').textContent = 'Cart: $' + cartTotal;
+        }
+
+        function proceedToCheckout() {
+            const cartTotal = document.getElementById('cartTotal').textContent;
+            if (cartTotal === 'Cart: $0') {
+                alert('Please add items to your cart before proceeding to checkout.');
+                return;
+            }
+            alert('Proceeding to checkout with ' + cartTotal);
+        }
+
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
