@@ -30,7 +30,7 @@ function showMessage(message, divId) {
   }, 5000);
 }
 
-//  Make sure to set login state
+// Set login state
 function setLogInUser(remember = false) {
   if (remember) {
     localStorage.setItem('LogInUser', 'true');
@@ -41,7 +41,7 @@ function setLogInUser(remember = false) {
   }
 }
 
-//  Form submission handler
+// Form submission handler
 document.addEventListener('DOMContentLoaded', function () {
   const loginButton = document.getElementById('login');
   const loginMessage = document.getElementById('loginMessage');
@@ -57,18 +57,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const email = document.getElementById('email')?.value;
     const password = document.getElementById('password')?.value;
 
-    // Simple check: make sure both fields are filled
     if (email && password) {
-      sessionStorage.setItem('userLoggedIn', 'true');
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Credentials are correct
+          setLogInUser(); // or pass true to remember
 
-      // Check if there was a previously stored page the user wanted
-      const intendedPage = sessionStorage.getItem('intendedPage');
-      if (intendedPage) {
-        sessionStorage.removeItem('intendedPage');
-        window.location.href = intendedPage;
-      } else {
-        window.location.href = '/coffee-shop-website-design-main/index.html'; // Default home
-      }
+          sessionStorage.setItem('userLoggedIn', 'true');
+
+          const intendedPage = sessionStorage.getItem('intendedPage');
+          if (intendedPage) {
+            sessionStorage.removeItem('intendedPage');
+            window.location.href = intendedPage;
+          } else {
+            window.location.href = '/coffee-shop-website-design-main/index.html';
+          }
+        })
+        .catch((error) => {
+          console.error("Login failed:", error.message);
+          if (loginMessage) {
+            loginMessage.innerText = 'Invalid email or password.';
+            loginMessage.style.display = 'block';
+          }
+        });
     } else {
       if (loginMessage) {
         loginMessage.innerText = 'Please enter both email and password.';
