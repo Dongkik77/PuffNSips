@@ -25,6 +25,19 @@
 
 </head>
 
+<audio id="bgMusic" autoplay loop>
+  <source src="/src/music/bgmusic.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+  document.addEventListener("click", function () {
+    const audio = document.getElementById("bgMusic");
+    audio.volume = 0.5; // adjust volume if needed
+    audio.play();
+  }, { once: true });
+</script>
+
+
 <body>
 
 
@@ -44,6 +57,7 @@
 
     </header>
 
+    
     <!-- HOME -->
     <section class="home" id="home">
         <div class="row">
