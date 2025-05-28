@@ -24,19 +24,22 @@
         <form>
           <div id="loginMessage" class="messageDiv" style="display: none;"></div>
           <div class="input-group">
-            <label for="email">Email:</label>
             <input type="email" name="email" placeholder="Enter Email" id="email" required>
           </div>
 
           <div class="input-group">
-            <label for="password">Password:</label>
             <input type="password" name="password" placeholder="Enter Password" id="password" required>
+            <input type="checkbox" name="showpP" id="show-pass" style="margin-top: 10px;">
+            <label for="show-pass">Show password.</label>
           </div>
 
           <div class="terms-group">
             <input type="checkbox" name="agree" id="agree-login">
             <label for="agree-login">I agree the <a href="#">Terms & Conditions</a></label>
           </div>
+
+          <div class="Forgot_password">
+            <a href="ResetPass.html">Forgot Password?</a>
 
           <button type="submit" id="login">Login</button>
 
@@ -48,6 +51,14 @@
     </div>
   </div>
 
+  <script>
+  const passwordInput = document.getElementById('password');
+  const showPassCheckbox = document.getElementById('show-pass');
+
+  showPassCheckbox.addEventListener('change', function () {
+    passwordInput.type = this.checked ? 'text' : 'password';
+  });
+</script>
   <script type="module" src="/coffee-shop-website-design-main/js/authsystem.js"></script>
   <script type="module" src="/coffee-shop-website-design-main/js/LogIn.js"></script>
 </body>
