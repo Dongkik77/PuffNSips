@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+           font-family: 'Poppins', sans-serif;
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           outline: none;
+           border: none;
+           text-decoration: none;
+           text-transform: capitalize;
+           transition: all .2s linear;
         }
         
         body {
@@ -26,10 +43,8 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #8B4513;
-            text-decoration: none;
+            color: var(--main-color);
+            font-size: 2.3rem;
         }
 
         .navbar {
@@ -42,10 +57,6 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #8B4513;
         }
 
         .btn {
@@ -276,12 +287,6 @@
         }
 
         /* Footer Styles */
-        .footer {
-            background: #333;
-            color: white;
-            padding: 3rem 2rem 1rem;
-            margin-top: 3rem;
-        }
 
         .box-container {
             display: grid;
