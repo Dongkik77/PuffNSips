@@ -637,11 +637,18 @@ section {
   padding: 40px 20px 20px;
 }
 
+.goat-h3{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(82, 49, 51); /* coffee-themed brown */
+  margin-bottom:  30px;
+}
+
 .goat-title {
   font-size: 2rem;
   font-weight: bold;
   color: #4a2e2a; /* coffee-themed brown */
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .goat-title span {
