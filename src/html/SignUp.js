@@ -71,3 +71,9 @@ document.getElementById("submit").addEventListener("click", async (e) => {
     }
   }
 });
+  const passwordInput = document.getElementById('password');
+  const showPassCheckbox = document.getElementById('show-pass');
+
+  showPassCheckbox.addEventListener('change', function () {
+    passwordInput.type = this.checked ? 'text' : 'password';
+  });
