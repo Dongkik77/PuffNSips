@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PuffnSip</title>
 
+
+
+
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
@@ -22,12 +25,28 @@
 
 </head>
 
+<audio id="bgMusic" autoplay loop>
+  <source src="/src/music/bgmusic.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+  document.addEventListener("click", function () {
+    const audio = document.getElementById("bgMusic");
+    audio.volume = 0.5; // adjust volume if needed
+    audio.play();
+  }, { once: true });
+</script>
+
+
 <body>
 
+
+    
     <!-- HEADER -->
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
-        <a href="#" class="logo">PuffnSip <i class="fas fa-mug-hot"></i></a>
+        <a href="/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i> <i class="fas fa-smog"></i></a>
+
         <nav class="navbar">
             <a href="/index.html">home</a>
             <a href="/src/html/About.html">about</a>
@@ -38,6 +57,7 @@
 
     </header>
 
+    
     <!-- HOME -->
     <section class="home" id="home">
         <div class="row">
