@@ -5,6 +5,12 @@
   <title>Forgot Password</title>
 </head>
 <body>
+  <form id="returnForm">
+  <button type="button" onclick="window.location.href='/src/html/LogSign.html'">
+    Return
+  </button>
+</form>
+
   <h2>Forgot Password</h2>
   <form id="resetForm">
     <label for="email">Enter your email address:</label><br>
@@ -12,11 +18,7 @@
     <button type="submit" id="submit">Reset Password</button>
   </form>
   
-  <form id="returnForm">
-  <button type="button" onclick="window.location.href='/src/html/LogSign.html'">
-    Return
-  </button>
-</form>
+  
 
   <div id="resetMessage" style="display:none; color: red; margin-top: 10px;"></div>
 
