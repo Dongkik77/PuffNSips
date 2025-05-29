@@ -12,28 +12,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Custom CSS File Link  -->
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/about.css">
 
-    <!--Web Icon-->
-    <!--*if it doesn't work immedietly, Ctrl+Shift+R to cache clean the web-->
+    <!-- Web Icon -->
     <link rel="icon" type="image/x-icon" href="/coffee-shop-website-design-main/image/coffee_vape_icon.ico">
-
 </head>
 
-
-<audio id="bgMusic" autoplay loop>
-  <source src="/src/music/bgmusic.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-<script>
-  document.addEventListener("click", function () {
-    const audio = document.getElementById("bgMusic");
-    audio.volume = 0.5; // adjust volume if needed
-    audio.play();
-  }, { once: true });
-</script>
-
 <body>
+    <!-- Background Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="/src/music/bgmusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener("click", function () {
+            const audio = document.getElementById("bgMusic");
+            audio.volume = 0.5;
+            audio.play();
+        }, { once: true });
+    </script>
 
     <!-- HEADER -->
     <header class="header">
@@ -41,22 +38,19 @@
 
         <a href="/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i> <i class="fas fa-smog"></i></a>
 
-
         <nav class="navbar">
             <a href="/index.html">home</a>
             <a href="/src/html/About.html">about</a>
             <a href="/src/html/Menu.html">menu</a>
             <a href="/src/html/Checkout.html">checkout</a>
         </nav>
-            
-            <a href="/src/html/LogSign.html" class = "btn"> Login/Signup</a>
 
+        <a href="/src/html/LogSign.html" class="btn">Login/Signup</a>
     </header>
 
+    <!-- ABOUT SECTION -->
     <section class="about" id="about" style="margin-top: 80px;">
-
-        <h1 class="heading slide-in"> about us <span>why choose us</span></h1>
-
+        <h1 class="heading slide-in">about us <span>why choose us</span></h1>
 
         <div class="row">
             <div class="image">
@@ -65,120 +59,77 @@
 
             <div class="content slide-in">
                 <h3 class="title">what's make our coffee & vape special!</h3>
-                <p>At Puff and Sip, coffee and vaping are more than an art—they are precise crafts, precisely engineered for balance, consistency, and excellence. Like engineers refining code or optimizing systems, we approach every sip and inhale with calculated precision to ensure smoothness, satisfaction, and refinement. Each coffee bean is carefully sourced, each roast is meticulously timed, and each brew is measured to perfection—creating the ideal harmony of flavor, aroma, and strength. Likewise, every vape blend is precisely formulated, airflow calibrated, and vapor density optimized to deliver flawless consistency. From the ratio of beans to water to the science behind vapor diffusion, every detail is fine-tuned to create an experience that is bold, smooth, and precisely engineered for satisfaction. Because great coffee and vaping aren’t just about taste or sensation—it’s about the formula behind them. And at Puff and Sip, we’ve perfected the equation. Precision. Balance. Perfection in every sip and inhale.
+<p>At Puff and Sip, coffee and vaping are more than an art—they are precise crafts, precisely engineered for balance, consistency, and excellence. Like engineers refining code or optimizing systems, we approach every sip and inhale with calculated precision to ensure smoothness, satisfaction, and refinement. Each coffee bean is carefully sourced, each roast is meticulously timed, and each brew is measured to perfection—creating the ideal harmony of flavor, aroma, and strength. Likewise, every vape blend is precisely formulated, airflow calibrated, and vapor density optimized to deliver flawless consistency. From the ratio of beans to water to the science behind vapor diffusion, every detail is fine-tuned to create an experience that is bold, smooth, and precisely engineered for satisfaction. Because great coffee and vaping aren’t just about taste or sensation—it’s about the formula behind them. And at Puff and Sip, we’ve perfected the equation. Precision. Balance. Perfection in every sip and inhale.
 
                 Precision. Balance. Perfection in every sip.</p>
 
-            <a href="/src/html/readmore.html" class="btn">read more</a>
-
-                
-             <a href="/src/html/explore.html" class="btn">Explore our spaces</a>
-
-             <p>________________________________________________________________________________</p>
+                <a href="/src/html/readmore.html" class="btn">read more</a>
+                <a href="/src/html/explore.html" class="btn">Explore our spaces</a>
 
                 <div class="icons-container">
                     <div class="icons">
                         <img src="/src/image/about-icon-1.png" alt="">
                         <h3>quality coffee</h3>
                     </div>
-                    <div class="icons"> 
+                    <div class="icons">
                         <img src="/src/image/about-icon-2.png" alt="">
                         <h3>expertly crafted products</h3>
-                    </div>
-                    
                     </div>
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
-     <!-- Description Section -->
-<section class="description">
-  <h2>Puff and Sip – Where every sip meets every puff</h2>
-  <p>
-    At Puff and Sip, every inhale and every sip is a ritual—a moment to pause, to reflect, and to indulge in the simple pleasures of life.
-    We blend the comforting warmth of expertly brewed coffee with the smooth allure of premium vaping, creating a space where relaxation and connection come naturally.
-  </p>
-  <p>
-    Here, the air is rich with the scent of roasted beans and delicate vapor, a harmony of flavors that invites conversation and contemplation.
-    Whether you crave the bold intensity of a dark roast or the effortless pull of a fine vape, Puff and Sip is more than a place—it’s an experience.
-    A sanctuary for those who appreciate quality, ambiance, and the quiet moments that fuel creativity and reflection.
-  </p>
-  <p>Take a breath. Take a sip. This is your space.</p>
-</section>
+    <!-- DESCRIPTION SECTION -->
+    <section class="description">
+        <h2>Puff and Sip – Where every sip meets every puff</h2>
+        <p>At Puff and Sip, every inhale and every sip is a ritual...</p>
+        <p>Here, the air is rich with the scent of roasted beans and delicate vapor...</p>
+        <p>Take a breath. Take a sip. This is your space.</p>
+    </section>
 
-<section class="goat-section">
-  <h2 class="goat-title">our GOAT </h2>
-  <h3 class="goat">(Greatest Of All Teams)</h3>
+    <!-- GOAT SECTION -->
+    <section class="goat-section">
+        <h2 class="goat-title">our GOAT </h2>
+        <h3 class="goat">(Greatest Of All Teams)</h3>
 
-<div class="photo-row">
+        <div class="photo-row">
+            <div class="photo-item">
+                <a href="Engr.Jek.html"><img src="/src/image/sirjerick.jpg" alt="Person 2" class="photo" /></a>
+                <p class="photo-name">Engr. Jerick Lising</p>
+            </div>
 
-  <div class="photo-item">
-  <a href="Engr.Jek.html">
-    <img src="/src/image/sirjerick.jpg" alt="Person 2" class="photo" />
-  </a>
-  <p class="photo-name">Engr. Jerick Lising</p>
-</div>
+            <div class="photo-item">
+                <a href="Engr.Sap.html"><img src="/src/image/sap.jpg" alt="Photo 3" class="photo" /></a>
+                <p class="photo-name">Engr. Ivan Sapnu</p>
+            </div>
 
+            <div class="photo-item">
+                <a href="Engr.Dek.html"><img src="/src/image/dek.jpg" alt="Person 1" class="photo" /></a>
+                <p class="photo-name">Engr. Dereck Orzal</p>
+            </div>
 
-   <div class="photo-item">
-  <a href="Engr.Sap.html">
-    <img src="/src/image/sap.jpg" alt="Photo 3" class="photo" />
-  </a>
-  <p class="photo-name">Engr. Ivan Sapnu</p>
-</div>
+            <div class="photo-item">
+                <a href="Engr.Floyd.html"><img src="/src/image/wembanyawa.jpg" alt="Photo 4" class="photo" /></a>
+                <p class="photo-name">Engr. Floyd Carlos</p>
+            </div>
 
-
-
-   <div class="photo-item">
-    <a href="Engr.Dek.html">
-      <img src="/src/image/dek.jpg" alt="Person 1" class="photo" />
-    </a>
-    <p class="photo-name">Engr. Dereck Orzal</p>
-  </div>
-
-  <div class="photo-item">
-    <a href="Engr.Floyd.html">
-      <img src="/src/image/wembanyawa.jpg" alt="Photo 4" class="photo" />
-    </a>
-    <p class="photo-name">Engr. Floyd Carlos</p>
-  </div>
-
-<div class="photo-item">
-    <a href="Engr.Vj.html">
-      <img src="/src/image/idolveejayy.jpg" alt="Person 1" class="photo" />
-    </a>
-    <p class="photo-name">Engr. Veejay Natividad</p>
-  </div>
-</div>
-
-
-
-
-
-      <!-- SWIPER -->
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-    <!-- Custom JS File Link  -->
-    <script src="/src/js/script.js"></script>
-
-
+            <div class="photo-item">
+                <a href="Engr.Vj.html"><img src="/src/image/idolveejayy.jpg" alt="Person 1" class="photo" /></a>
+                <p class="photo-name">Engr. Veejay Natividad</p>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <section class="footer">
         <div class="box-container">
-           <div class="box">
-  <h3>our branches</h3>
-  <a href="/src/html/bacolor.html">
-    <i class="fas fa-arrow-right"></i> Bacolor - Pampanga
-  </a>
-  <a href="/src/html/dhvsu.html">
-    <i class="fas fa-arrow-right"></i> Don Honorio Ventura State University - Pampanga
-  </a>
-  <a href="/src/html/quezoncity.html">
-    <i class="fas fa-arrow-right"></i> Quezon City - Manila
-  </a>
-</div>
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="/src/html/bacolor.html"><i class="fas fa-arrow-right"></i> Bacolor - Pampanga</a>
+                <a href="/src/html/dhvsu.html"><i class="fas fa-arrow-right"></i> Don Honorio Ventura State University - Pampanga</a>
+                <a href="/src/html/quezoncity.html"><i class="fas fa-arrow-right"></i> Quezon City - Manila</a>
+            </div>
 
             <div class="box">
                 <h3>contact info</h3>
@@ -190,25 +141,60 @@
 
             <div class="box">
                 <h3>socials</h3>
-                <a href="https://www.facebook.com/profile.php?id=61576628738777" target="_blank">
-  <i class="fab fa-facebook-f"></i> facebook
-</a>
-
-                <a href="https://www.instagram.com/puffnsip_/" target="_blank">
-  <i class="fab fa-instagram"></i> instagram
-</a>
-            
+                <a href="https://www.facebook.com/profile.php?id=61576628738777" target="_blank"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="https://www.instagram.com/puffnsip_/" target="_blank"><i class="fab fa-instagram"></i> instagram</a>
             </div>
         </div>
 
-     <div class="credit"> <span>PuffnSip </span> | all rights reserved 2025</div>
+        <div class="credit"> <span>PuffnSip </span> | all rights reserved 2025</div>
     </section>
 
-   <!--Change login to logout-->
-  <script src="/src/js/logintologout.js"></script>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.navbar');
 
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        };
 
-  
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        };
 
+        document.querySelectorAll('.image-slider img').forEach(images => {
+            images.onclick = () => {
+                var src = images.getAttribute('src');
+                document.querySelector('.main-home-image').src = src;
+            };
+        });
+
+        var swiper = new Swiper(".review-slider", {
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                }
+            },
+        });
+    </script>
+    <script src="/src/js/script.js"></script>
+    <script src="/src/js/logintologout.js"></script>
 </body>
 </html>
