@@ -1,6 +1,6 @@
 // Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js";
 import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
 
 // Firebase config
@@ -14,13 +14,22 @@ const firebaseConfig = {
   databaseURL: "https://super-final-web-project-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 
-// ✅ Log the config to verify it's correct in production
-console.log("Firebase initialized with config:", firebaseConfig);
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+// Debug: Log Firebase config
+console.log("Firebase initialized with config:", firebaseConfig);
+
+// Track auth state changes (debugging)
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("User signed in:", user.uid);
+  } else {
+    console.log("No user signed in");
+  }
+});
 
 // Show message helper
 function showMessage(message, divId) {
@@ -49,8 +58,14 @@ document.getElementById("submit").addEventListener("click", async (e) => {
   }
 
   try {
+    // Create user with email and password
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
+    console.log("User created:", user.uid);
+
+    // Get fresh ID token for debug
+    const idToken = await user.getIdToken(true);
+    console.log("User ID Token (refreshed):", idToken);
 
     // Save user info (excluding password!) to Firestore
     await setDoc(doc(db, "users", user.uid), {
