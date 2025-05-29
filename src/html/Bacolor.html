@@ -21,6 +21,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+
+
+<audio id="bgMusic" autoplay loop>
+  <source src="/src/music/bgmusic.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+  document.addEventListener("click", function () {
+    const audio = document.getElementById("bgMusic");
+    audio.volume = 0.5; // adjust volume if needed
+    audio.play();
+  }, { once: true });
+</script>
+
 <body>
 
     <!-- HEADER -->
