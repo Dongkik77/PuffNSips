@@ -71,7 +71,6 @@ document.getElementById("submit").addEventListener("click", async (e) => {
     await setDoc(doc(db, "users", user.uid), {
       username,
       address,
-      password,
       email,
       agreeSignup
     });
