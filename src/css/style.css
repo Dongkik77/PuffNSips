@@ -900,8 +900,6 @@ section {
   border-color: #7A5742;         /* Keep border color */
 }
 
-
-<style>
 /* SLIDE-IN from left */
 .slide-in {
   opacity: 0;
@@ -927,4 +925,3 @@ section {
     opacity: 1;
   }
 }
-</style>
