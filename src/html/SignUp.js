@@ -14,6 +14,9 @@ const firebaseConfig = {
   databaseURL: "https://super-final-web-project-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 
+// ✅ Log the config to verify it's correct in production
+console.log("Firebase initialized with config:", firebaseConfig);
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -52,7 +55,7 @@ document.getElementById("submit").addEventListener("click", async (e) => {
     // Save user info (excluding password!) to Firestore
     await setDoc(doc(db, "users", user.uid), {
       username,
-      address, password,
+      address,
       email,
       agreeSignup
     });
@@ -71,9 +74,10 @@ document.getElementById("submit").addEventListener("click", async (e) => {
     }
   }
 });
-  const passwordInput = document.getElementById('password');
-  const showPassCheckbox = document.getElementById('show-pass');
 
-  showPassCheckbox.addEventListener('change', function () {
-    passwordInput.type = this.checked ? 'text' : 'password';
-  });
+const passwordInput = document.getElementById('password');
+const showPassCheckbox = document.getElementById('show-pass');
+
+showPassCheckbox.addEventListener('change', function () {
+  passwordInput.type = this.checked ? 'text' : 'password';
+});
