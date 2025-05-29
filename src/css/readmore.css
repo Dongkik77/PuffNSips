@@ -799,3 +799,43 @@ section {
 .readmore-photo:hover img {
   transform: scale(1.05);
 }
+
+/*nav bar */
+
+.header {
+  background-color: #F5F5DC; /* Beige background */
+  color: #7A5742;            /* Softer brown text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header .logo {
+  color: #7A5742;
+  font-weight: bold;
+}
+
+.header .navbar a {
+  color: #7A5742;
+  transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+  color: #A0522D; /* Burnt sienna hover */
+}
+
+.header .btn {
+  background-color: transparent;  /* Transparent background */
+  color: #7A5742;                 /* Keep text  with soft brown */
+  border: 2px solid #7A5742;     /* Border same color as text */
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .btn:hover {
+  background-color: #7A5742;     /* Fill background on hover */
+  color: #F5F5DC;                /* Light beige text on hover */
+  border-color: #7A5742;         /* Keep border color */
+}
