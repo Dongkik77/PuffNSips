@@ -157,47 +157,153 @@
     
 
     <!-- FOOTER -->
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding: 40px 60px;
+            border-radius: 8px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .footer-table th {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8B5A3C;
+            text-align: left;
+            padding: 0 60px 30px 0;
+            border: none;
+            vertical-align: top;
+        }
+
+        .footer-table td {
+            padding: 0 60px 0 0;
+            vertical-align: top;
+            border: none;
+        }
+
+        .footer-table a {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 1.8;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-table a:hover {
+            color: #8B5A3C;
+        }
+
+        .footer-table i {
+            margin-right: 10px;
+            color: #8B5A3C;
+            width: 16px;
+        }
+
+        .credit {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .credit span {
+            font-weight: bold;
+            color: #8B5A3C;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 30px 20px;
+            }
+            
+            .footer-table th,
+            .footer-table td {
+                padding-right: 20px;
+                display: block;
+                width: 100%;
+            }
+            
+            .footer-table th {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .footer-table td {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
     <section class="footer">
-        <div class="box-container">
-           <div class="box">
-  <h3>our branches</h3>     
-  <a href="/src/html/Bacolor.html">
-    <i class="fas fa-arrow-right"></i> Bacolor - Pampanga
-  </a>
-  <a href="/src/html/dhvsu.html">
-    <i class="fas fa-arrow-right"></i> Don Honorio Ventura State University - Pampanga
-  </a>
-  <a href="/src/html/quezoncity.html">
-    <i class="fas fa-arrow-right"></i> Quezon City - Manila
-  </a>
-</div>
-
-
-            <div class="box">
-                <h3>contact info</h3>
-                <a href="#"><i class="fas fa-phone"></i> 0997 557 4582 - Pampanga Branch </a>
-                <a href="#"><i class="fas fa-phone"></i> 0981 544 2918 - Manila Branch </a>
-                <a href="#"><i class="fas fa-envelope"></i> puffnsipbacolor@gmail.com</a>
-                <a href="mailto:pufffnsip@gmail.com?subject=Inquiry%20from%20Customer&body=Hi%20PuffnSip%20Team,%0A%0AI%20would%20like%20to%20ask%20about...">
-  <i class="fas fa-envelope"></i> pufffnsip@gmail.com
-</a>
-
-            </div>
-
-            <div class="box">
-                <h3>socials</h3>
-                <a href="https://www.facebook.com/profile.php?id=61576628738777" target="_blank">
-  <i class="fab fa-facebook-f"></i> facebook
-</a>
-
-                <a href="https://www.instagram.com/puffnsip_/" target="_blank">
-  <i class="fab fa-instagram"></i> instagram
-</a>
-
-            </div>
+        <table class="footer-table">
+            <thead>
+                <tr>
+                    <th>Our Branches</th>
+                    <th>Contact Info</th>
+                    <th>Socials</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="/src/html/Bacolor.html">
+                            <i class="fas fa-arrow-right"></i> Bacolor - Pampanga
+                        </a>
+                        <a href="/src/html/dhvsu.html">
+                            <i class="fas fa-arrow-right"></i> Don Honorio Ventura State University - Pampanga
+                        </a>
+                        <a href="/src/html/quezoncity.html">
+                            <i class="fas fa-arrow-right"></i> Quezon City - Manila
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:09975574582">
+                            <i class="fas fa-phone"></i> 0997 557 4582 - Pampanga Branch
+                        </a>
+                        <a href="tel:09815442918">
+                            <i class="fas fa-phone"></i> 0981 544 2918 - Manila Branch
+                        </a>
+                        <a href="mailto:puffnsipbacolor@gmail.com">
+                            <i class="fas fa-envelope"></i> Puffnsipbacolor@Gmail.Com
+                        </a>
+                        <a href="mailto:pufffnsip@gmail.com?subject=Inquiry%20from%20Customer&body=Hi%20PuffnSip%20Team,%0A%0AI%20would%20like%20to%20ask%20about...">
+                            <i class="fas fa-envelope"></i> Pufffnsip@Gmail.Com
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://www.facebook.com/profile.php?id=61576628738777" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/puffnsip_/" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="credit">
+            <span>PuffnSip</span> | All Rights Reserved 2025
         </div>
-
-        <div class="credit"> <span>PuffnSip </span> | all rights reserved 2025</div>
     </section>
 
     <!-- SWIPER -->
