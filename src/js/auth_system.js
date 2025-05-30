@@ -90,10 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.includes('Checkout.html')) {
         protectCheckoutPage();
     }
-    if (window.location.pathname.includes('Feedback.html')) {
-        protectCheckoutPage();
-    }
-
     //  DEBUG (optional): log login state
     console.log("Login status:", isUserLoggedIn());
 });
