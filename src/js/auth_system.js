@@ -38,7 +38,7 @@ function protectCheckoutPage() {
     if (!isUserLoggedIn()) {
         alert('Please log in to access the checkout page.');
         storeIntendedPage(window.location.pathname);
-        window.location.href = '/coffee-shop-website-design-main/html/LogSign.html';
+        window.location.href = '/src/html/LogSign.html';
         return false;
     }
     return true;
@@ -54,13 +54,13 @@ function updateNavigation() {
                 e.preventDefault();
                 logUserOut();
                 alert('You have been logged out successfully!');
-                window.location.href = '/coffee-shop-website-design-main/index.html';
+                window.location.href = '/index.html';
             };
         } else {
             loginBtn.textContent = 'Login/Signup';
             loginBtn.onclick = function(e) {
                 e.preventDefault();
-                window.location.href = '/coffee-shop-website-design-main/html/LogSign.html';
+                window.location.href = '/src/html/LogSign.html';
             };
         }
     }
@@ -74,8 +74,8 @@ function protectCheckoutLinks() {
             if (!isUserLoggedIn()) {
                 e.preventDefault();
                 alert('Please log in to access the checkout page.');
-                storeIntendedPage('/coffee-shop-website-design-main/html/Checkout.html');
-                window.location.href = '/coffee-shop-website-design-main/html/LogSign.html';
+                storeIntendedPage('/src/html/Checkout.html');
+                window.location.href = '/src/html/LogSign.html';
             }
         });
     });
@@ -88,6 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Only protect checkout if we're on that page
     if (window.location.pathname.includes('Checkout.html')) {
+        protectCheckoutPage();
+    }
+    if (window.location.pathname.includes('Feedback.html')) {
         protectCheckoutPage();
     }
 
