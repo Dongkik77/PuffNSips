@@ -946,51 +946,232 @@ section {
 
 /* RESPONSE ADJUSTMENTS */
 
-.footer .box-container .box a:hover i {
-    padding-right: 1rem;
-}
+.footer {
+            background-color: #f8f8f8;
+            padding: 40px 60px;
+            border-radius: 8px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.footer .credit {
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 1.6rem;
-    color: var(--main-color);
-    border-top: var(--border);
-    margin-top: 2rem;
-}
+        /* Desktop Table Layout */
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
 
-.footer .credit span {
-    font-weight: 600;
-    color: var(--main-color);
-}
+        .footer-table th {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8B5A3C;
+            text-align: left;
+            padding: 0 60px 30px 0;
+            border: none;
+            vertical-align: top;
+        }
 
+        .footer-table td {
+            padding: 0 60px 0 0;
+            vertical-align: top;
+            border: none;
+        }
 
-@media (max-width: 991px) {
-    html {
-        font-size: 55%;
-    }
+        .footer-table a {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 1.8;
+            display: block;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+        }
 
-    .header {
-        padding: 2rem;
-    }
+        .footer-table a:hover {
+            color: #8B5A3C;
+        }
 
-    .header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 2rem;
-        display: none;
-    }
+        .footer-table i {
+            margin-right: 10px;
+            color: #8B5A3C;
+            width: 20px;
+            text-align: center;
+        }
 
-    .header .navbar.active {
-        display: flex;
-    }
+        .credit {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 16px;
+        }
 
-    #menu-btn {
-        display: inline-block;
-    }
-}
+        .credit span {
+            font-weight: bold;
+            color: #8B5A3C;
+        }
+
+        /* Tablet Layout */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 30px 20px;
+            }
+            
+            .footer-table th,
+            .footer-table td {
+                padding-right: 20px;
+                display: block;
+                width: 100%;
+            }
+            
+            .footer-table th {
+                font-size: 20px;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #8B5A3C;
+                padding-bottom: 10px;
+                padding-right: 0;
+            }
+            
+            .footer-table td {
+                margin-bottom: 30px;
+                padding-right: 0;
+            }
+            
+            .footer-table a {
+                font-size: 15px;
+                padding: 8px 0;
+                border-left: 3px solid transparent;
+                padding-left: 10px;
+                transition: all 0.3s ease;
+            }
+            
+            .footer-table a:hover {
+                border-left-color: #8B5A3C;
+                padding-left: 15px;
+            }
+        }
+
+        /* Mobile Layout - Transform table to card layout */
+        @media (max-width: 480px) {
+            .footer {
+                padding: 20px 15px;
+            }
+            
+            /* Hide original table structure on mobile */
+            .footer-table thead {
+                display: none;
+            }
+            
+            .footer-table,
+            .footer-table tbody,
+            .footer-table tr {
+                display: block;
+            }
+            
+            .footer-table td {
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+                background-color: white;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+            
+            /* Add headers as pseudo-elements */
+            .footer-table td:nth-child(1):before {
+                content: "Our Branches";
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: #8B5A3C;
+                color: white;
+                padding: 12px;
+                border-radius: 8px;
+                margin: -15px -15px 15px -15px;
+                text-align: center;
+            }
+            
+            .footer-table td:nth-child(2):before {
+                content: "Contact Info";
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: #8B5A3C;
+                color: white;
+                padding: 12px;
+                border-radius: 8px;
+                margin: -15px -15px 15px -15px;
+                text-align: center;
+            }
+            
+            .footer-table td:nth-child(3):before {
+                content: "Socials";
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: #8B5A3C;
+                color: white;
+                padding: 12px;
+                border-radius: 8px;
+                margin: -15px -15px 15px -15px;
+                text-align: center;
+            }
+            
+            .footer-table a {
+                font-size: 14px;
+                padding: 10px;
+                margin-bottom: 8px;
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                border-left: 4px solid #8B5A3C;
+            }
+            
+            .footer-table a:hover {
+                background-color: #8B5A3C;
+                color: white;
+            }
+            
+            .footer-table i {
+                width: 25px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 320px) {
+            .footer-table a {
+                font-size: 13px;
+            }
+            
+            .footer-table td:before {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Ensure table maintains structure on larger screens */
+        @media (min-width: 481px) {
+            .footer-table {
+                display: table;
+            }
+            
+            .footer-table thead {
+                display: table-header-group;
+            }
+            
+            .footer-table tbody {
+                display: table-row-group;
+            }
+            
+            .footer-table tr {
+                display: table-row;
+            }
+            
+            .footer-table th,
+            .footer-table td {
+                display: table-cell;
+            }
+        }
