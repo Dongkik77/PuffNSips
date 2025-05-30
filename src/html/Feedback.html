@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuffnSip - Feedback Form</title>
+    
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS File Link  -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/feedback.css">
+
+    <!--Web Icon-->
+    <!--*if it doesn't work immedietly, Ctrl+Shift+R to cache clean the web-->
+    <link rel="icon" type="image/x-icon" href="/coffee-shop-website-design-main/image/coffee_vape_icon.ico">
+
+    
+</head>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="/src/music/bgmusic.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+  document.addEventListener("click", function () {
+    const audio = document.getElementById("bgMusic");
+    audio.volume = 0.5; // adjust volume if needed
+    audio.play();
+  }, { once: true });
+</script>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i> <i class="fas fa-smog"></i></a>
+
+        <nav class="navbar">
+            <a href="/index.html">home</a>
+            <a href="/src/html/About.html">about</a>
+            <a href="/src/html/Menu.html">menu</a>
+            <a href="/src/html/Feedback.html">feedback</a>
+            <a href="/src/html/Checkout.html">checkout</a>
+        </nav>
+            <a href="/src/html/LogSign.html" class = "btn"> Login/Signup</a>
+
+    </header>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section" id="feedback">
+        <h1 class="heading">feedback <span>tell us your experience</span></h1>
+        
+        <div class="feedback-container">
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Thank you for your feedback! We appreciate your input.
+            </div>
+            
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="customerName">
+                        <i class="fas fa-user"></i> Your Name
+                    </label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitDate">
+                        <i class="fas fa-calendar"></i> Date of Visit
+                    </label>
+                    <input type="date" id="visitDate" name="visitDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="branch">
+                        <i class="fas fa-map-marker-alt"></i> Branch Visited
+                    </label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="bacolor">Bacolor - Pampanga</option>
+                        <option value="dhvsu">Don Honorio Ventura State University - Pampanga</option>
+                        <option value="quezon">Quezon City - Manila</option>
+                    </select>
+                </div>
+
+                <div class="rating-group">
+                    <div class="rating-item">
+                        <label>
+                            <i class="fas fa-coffee"></i> Coffee Quality
+                        </label>
+                        <div class="stars" data-rating="coffee">
+                            <i class="fas fa-star star" data-value="1"></i>
+                            <i class="fas fa-star star" data-value="2"></i>
+                            <i class="fas fa-star star" data-value="3"></i>
+                            <i class="fas fa-star star" data-value="4"></i>
+                            <i class="fas fa-star star" data-value="5"></i>
+                        </div>
+                    </div>
+
+                    <div class="rating-item">
+                        <label>
+                            <i class="fas fa-smog"></i> Vape Products
+                        </label>
+                        <div class="stars" data-rating="vape">
+                            <i class="fas fa-star star" data-value="1"></i>
+                            <i class="fas fa-star star" data-value="2"></i>
+                            <i class="fas fa-star star" data-value="3"></i>
+                            <i class="fas fa-star star" data-value="4"></i>
+                            <i class="fas fa-star star" data-value="5"></i>
+                        </div>
+                    </div>
+
+                    <div class="rating-item">
+                        <label>
+                            <i class="fas fa-users"></i> Service Quality
+                        </label>
+                        <div class="stars" data-rating="service">
+                            <i class="fas fa-star star" data-value="1"></i>
+                            <i class="fas fa-star star" data-value="2"></i>
+                            <i class="fas fa-star star" data-value="3"></i>
+                            <i class="fas fa-star star" data-value="4"></i>
+                            <i class="fas fa-star star" data-value="5"></i>
+                        </div>
+                    </div>
+
+                    <div class="rating-item">
+                        <label>
+                            <i class="fas fa-home"></i> Atmosphere
+                        </label>
+                        <div class="stars" data-rating="atmosphere">
+                            <i class="fas fa-star star" data-value="1"></i>
+                            <i class="fas fa-star star" data-value="2"></i>
+                            <i class="fas fa-star star" data-value="3"></i>
+                            <i class="fas fa-star star" data-value="4"></i>
+                            <i class="fas fa-star star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-heart"></i> What did you enjoy most?
+                    </label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="coffee" name="enjoyed[]" value="coffee">
+                            <label for="coffee">Coffee Selection</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="vape" name="enjoyed[]" value="vape">
+                            <label for="vape">Vape Products</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="ambiance" name="enjoyed[]" value="ambiance">
+                            <label for="ambiance">Ambiance</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="staff" name="enjoyed[]" value="staff">
+                            <label for="staff">Friendly Staff</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="prices" name="enjoyed[]" value="prices">
+                            <label for="prices">Fair Prices</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="location" name="enjoyed[]" value="location">
+                            <label for="location">Convenient Location</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">
+                        <i class="fas fa-comment"></i> Additional Comments
+                    </label>
+                    <textarea id="comments" name="comments" placeholder="Tell us more about your experience..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="recommendation">
+                        <i class="fas fa-thumbs-up"></i> Would you recommend PuffnSip to others?
+                    </label>
+                    <select id="recommendation" name="recommendation" required>
+                        <option value="">Select an option</option>
+                        <option value="definitely">Definitely Yes</option>
+                        <option value="probably">Probably Yes</option>
+                        <option value="maybe">Maybe</option>
+                        <option value="probably-not">Probably Not</option>
+                        <option value="definitely-not">Definitely Not</option>
+                    </select>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn" onclick="resetForm()">
+                        <i class="fas fa-undo"></i> Reset Form
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Submit Feedback
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+            this.classList.toggle('fa-times');
+        });
+
+        // Star rating functionality
+        const starGroups = document.querySelectorAll('.stars');
+        const ratings = {};
+
+        starGroups.forEach(group => {
+            const stars = group.querySelectorAll('.star');
+            const ratingType = group.getAttribute('data-rating');
+            
+            stars.forEach((star, index) => {
+                star.addEventListener('mouseover', () => {
+                    stars.forEach((s, i) => {
+                        s.classList.toggle('active', i <= index);
+                    });
+                });
+
+                star.addEventListener('click', () => {
+                    ratings[ratingType] = index + 1;
+                    stars.forEach((s, i) => {
+                        s.classList.toggle('active', i <= index);
+                    });
+                });
+            });
+
+            group.addEventListener('mouseleave', () => {
+                const currentRating = ratings[ratingType] || 0;
+                stars.forEach((s, i) => {
+                    s.classList.toggle('active', i < currentRating);
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            successMessage.scrollIntoView({ behavior: 'smooth' });
+            
+            // Reset form after delay
+            setTimeout(() => {
+                resetForm();
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
+
+        // Reset form function
+        function resetForm() {
+            document.getElementById('feedbackForm').reset();
+            
+            // Reset star ratings
+            Object.keys(ratings).forEach(key => {
+                delete ratings[key];
+            });
+            
+            document.querySelectorAll('.star').forEach(star => {
+                star.classList.remove('active');
+            });
+        }
+
+        // Form animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.form-group').forEach(group => {
+            observer.observe(group);
+        });
+    </script>
+</body>
+</html>
