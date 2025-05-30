@@ -133,11 +133,6 @@
             animation: slideIn 1s ease-out 0.3s forwards;
         }
 
-        .feedback-container:hover {
-            border: var(--border-hover);
-            border-radius: var(--border-radius-hover);
-        }
-
         .form-group {
             margin-bottom: 2.5rem;
         }
