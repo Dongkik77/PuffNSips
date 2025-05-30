@@ -5,28 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PuffnSip - Feedback Form</title>
 
+  <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
   <!-- Font Awesome CDN Link -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet"/>
 
   <!-- Custom CSS File Link -->
   <link rel="stylesheet" href="/src/css/style.css" />
   <link rel="stylesheet" href="/src/css/feedback.css" />
 
   <!-- Web Icon -->
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="/coffee-shop-website-design-main/image/coffee_vape_icon.ico"
-  />
+  <link rel="icon"  type="image/x-icon" href="/coffee-shop-website-design-main/image/coffee_vape_icon.ico" />
 </head>
 <body>
   <audio id="bgMusic" autoplay loop>
@@ -48,9 +41,7 @@
   <!-- Header -->
   <header class="header">
     <div id="menu-btn" class="fas fa-bars"></div>
-    <a href="/index.html" class="logo"
-      >PuffnSip <i class="fas fa-mug-hot"></i> <i class="fas fa-smog"></i
-    ></a>
+    <a href="/index.html" class="logo">PuffnSip <i class="fas fa-mug-hot"></i> <i class="fas fa-smog"></i></a>
 
     <nav class="navbar">
       <a href="/index.html">home</a>
@@ -225,11 +216,14 @@
             </form>
         </div>
     </section>
+    
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script>
         // Mobile menu toggle
         document.getElementById('menu-btn').addEventListener('click', function() {
-            const navbar = document.querySelector('.navbar');
+            const navbar = document.querySelector('navbar');
             navbar.classList.toggle('active');
             this.classList.toggle('fa-times');
         });
@@ -322,6 +316,10 @@
         });
         window.ratings = ratings;
     </script>
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <script type="module" src="/src/js/feedback.js"></script>
     <script type="module" src="/src/js/logintologout.js"></script>
 </body>

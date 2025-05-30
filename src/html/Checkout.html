@@ -71,6 +71,7 @@
             <a href="/src/html/LogSign.html" class = "btn"> Login/Signup</a>
 
     </header>
+
     <div class="main-container">
         <div class="page-title">
             <h1><i class="fas fa-shopping-cart"></i> Product Selection</h1>
@@ -344,7 +345,33 @@
         <div class="credit"> <span>PuffnSip </span> | all rights reserved 2025</div>
     </section>
 
-    <!-- SWIPER -->
+     <!-- Mobile Menu Toggle Script -->
+    <script>
+        // Mobile menu toggle functionality
+        let menuBtn = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('navbar');
+
+        menuBtn.onclick = () => {
+            menuBtn.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a nav link (mobile)
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.onclick = () => {
+                menuBtn.classList.remove('fa-times');
+                navbar.classList.remove('active');
+            }
+        });
+
+        // Close menu when scrolling (mobile)
+        window.onscroll = () => {
+            menuBtn.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+
+     <!-- SWIPER -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- Custom JS File Link  -->
@@ -354,11 +381,9 @@
     <script src="/src/js/auth.js"></script>
     <!-- Include the original checkout script -->
     <script src="/src/js/checkout.js"></script>
+    <script src="/src/js/CoJs.js"></script>
     <!--Change login to logout-->
   <script src="/src/js/logintologout.js"></script>
-    
-    <!-- Additional authentication handling for this page -->
-   
 
 </body>
 </html>
